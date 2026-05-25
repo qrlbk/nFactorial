@@ -1,18 +1,8 @@
 {
   "name": "n-factorial",
   "private": true,
-  "description": "Vercel deploy root — Next.js app in frontend/ (next listed here for Vercel detection)",
-  "workspaces": ["frontend"],
-  "scripts": {
-    "build": "npm run build --workspace=frontend",
-    "dev": "npm run dev --workspace=frontend"
-  },
+  "description": "Repo root — deploy UI from frontend/ only (see vercel.json).",
   "dependencies": {
-    "next": "16.2.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
-  "engines": {
-    "node": "20.x"
+    "next": "16.2.6"
   }
 }

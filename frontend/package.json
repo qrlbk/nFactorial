@@ -7,7 +7,14 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "check:i18n": "node scripts/check-i18n-parity.mjs"
+    "check:i18n": "node scripts/check-i18n-parity.mjs",
+    "postinstall": "node scripts/install-linux-native-deps.mjs"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-linux-x64-gnu": "4.3.0",
+    "@tailwindcss/oxide-linux-arm64-gnu": "4.3.0",
+    "lightningcss-linux-x64-gnu": "1.32.0",
+    "lightningcss-linux-arm64-gnu": "1.32.0"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",

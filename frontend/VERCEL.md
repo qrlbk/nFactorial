@@ -1,27 +1,36 @@
-# Vercel setup (required)
+# Vercel — обязательные настройки
 
-## Wrong build (Python instead of Next.js)
+## 1. Root Directory = `frontend` (рекомендуется)
 
-If deploy logs show:
+**Project → Settings → General → Root Directory:** `frontend`
 
-```
-Using Python 3.12 from pyproject.toml
-runtime: python3.12  path: /
-```
+Тогда:
+- один `node_modules` (без `../node_modules/next` из корня репо)
+- `frontend/vercel.json` управляет сборкой
+- корневой `vercel.json` можно игнорировать
 
-Vercel is deploying the **FastAPI backend**, not the UI. Fix:
+**Install:** `npm install --include=optional`  
+**Build:** `npm run build`
 
-1. **Settings → General → Framework Preset:** **Next.js**
-2. **Root Directory:** `frontend` (recommended), **or** use repo-root `vercel.json` (already in repo)
-3. **Redeploy** with **Clear build cache**
+## 2. Если Root Directory пустой (корень репо)
 
-Correct log should mention `npm run build` and Next.js, not Python.
+Используется корневой `vercel.json` с `cd frontend && ...`.  
+**Framework Preset:** Next.js (не Python).
 
-If you see `No Next.js version detected`: root `package.json` must list `next` in `dependencies` (already in repo), or set **Root Directory** to `frontend` only.
+## 3. Environment
 
-## Checklist
+| Variable | Value |
+|----------|--------|
+| `API_URL` | `https://your-api.onrender.com` |
 
-1. **Root Directory:** leave **empty** (repo root uses `package.json` workspaces) **or** set `frontend` and remove root `vercel.json` overrides
-2. **Environment → Production:** `API_URL` = Render API URL (no trailing slash)
-3. **Redeploy** with clear cache
-4. Test: `https://YOUR_APP.vercel.app/en`
+## 4. Native deps (Tailwind v4)
+
+На Linux CI npm может не поставить `@tailwindcss/oxide-linux-*` (npm/cli#4828).  
+В проекте: `optionalDependencies` + `postinstall` → `scripts/install-linux-native-deps.mjs`.
+
+## 5. Проверка лога
+
+✅ `Detected Next.js version: 16.2.6`  
+✅ `next build --webpack`  
+❌ `Using Python 3.12 from pyproject.toml`  
+❌ `Cannot find native binding` / `oxide-linux`
