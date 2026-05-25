@@ -2,6 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "installCommand": "npm ci --include=optional",
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build && test -f ../.next/routes-manifest-deterministic.json",
   "regions": ["iad1"]
 }

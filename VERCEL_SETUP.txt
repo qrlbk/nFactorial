@@ -27,6 +27,11 @@ Do NOT leave Root Directory empty.
   Detected Next.js version: 16.2.6
   Generating static pages (20+)  — NOT (1/1)
   Routes: /en, /ru, /discover …  — NOT only /404
+  [vercel-postbuild] synced .next to repo root  — fixes routes-manifest-deterministic ENOENT
+
+If build succeeds then fails with:
+  ENOENT ... /vercel/path0/.next/routes-manifest-deterministic.json
+→ pull latest main (includes frontend/scripts/vercel-postbuild.mjs), Redeploy, Clear cache.
 
 === API ===
 
