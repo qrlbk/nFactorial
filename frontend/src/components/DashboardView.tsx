@@ -20,11 +20,7 @@ import {
   apiModeFromId,
   type ModeId,
 } from "@/lib/modes";
-import {
-  getOutputLanguage,
-  setOutputLanguage,
-  type OutputLanguage,
-} from "@/lib/output-language";
+import { setOutputLanguage, type OutputLanguage } from "@/lib/output-language";
 import type { AppLocale } from "@/i18n/routing";
 import type { OutputType } from "@/lib/platform-types";
 import type { GenerateResponse, PipelineStepUI, TraceResponse } from "@/lib/types";
@@ -58,10 +54,11 @@ export function DashboardView({ initialTraceId, initialContext = "" }: Props) {
   const replayRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
-    setOutputLang(getOutputLanguage());
+    setOutputLang(locale);
+    setOutputLanguage(locale);
     const ctx = searchParams.get("context");
     if (ctx) setContext(decodeURIComponent(ctx));
-  }, [searchParams]);
+  }, [searchParams, locale]);
 
   const translateStep = useCallback(
     (node: string) => {

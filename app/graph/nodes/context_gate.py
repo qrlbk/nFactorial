@@ -16,7 +16,10 @@ async def context_qualification_gate_node(
 ) -> dict[str, Any]:
     """Deterministic epistemic gate — runs before thesis to block empty cognition."""
     raw = state.get("raw_context", "")
-    result = evaluate_input_worthiness(raw)
+    result = evaluate_input_worthiness(
+        raw,
+        output_language=state.get("output_language", "en"),
+    )
     borderline = detect_borderline_input(raw)
 
     log = list(state.get("pipeline_log", []))
