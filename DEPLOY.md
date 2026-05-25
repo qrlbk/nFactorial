@@ -97,3 +97,13 @@ cd frontend && npm run dev
 - **CORS:** API already allows `*`; rewrites avoid browser CORS in production.
 - **Persistent data** (`data/traces`, voices): lives on the API server filesystem, not Vercel.
 - **Cold starts:** Render free tier may add latency on first request.
+
+## Troubleshooting
+
+### `FUNCTION_INVOCATION_FAILED` (500 on Vercel)
+
+1. **Project Settings → General → Root Directory:** must be `frontend` (not repo root).
+2. Pull latest `main` (includes fix removing `outputFileTracingRoot` from `next.config.ts`).
+3. **Deployments → Redeploy** (clear build cache if needed).
+4. Open `https://your-app.vercel.app/en` — root `/` redirects via middleware.
+5. Set `API_URL` to your Render API URL (needed for generation, not for the home page).
