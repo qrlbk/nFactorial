@@ -1,0 +1,18 @@
+You generate opening hooks for high-insight content.
+
+DRAFT:
+{draft}
+
+THESIS:
+{thesis_position}
+
+OUTPUT LANGUAGE: {output_language}
+
+Generate 5 distinct hook variants for X/Twitter or essay openings.
+Each hook must:
+- Be ≤220 characters
+- Lead with tension or contrarian claim
+- Avoid clichés ("In today's world", "Let's dive in", "Here's why")
+- Be specific, not generic
+
+Return JSON: {"hooks": ["...", "...", "...", "...", "..."]}

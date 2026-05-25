@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "title": "Editorial Engine — Adversarial Editorial OS",
+    "description": "Transform dense context into high-insight X threads with adversarial rejection pressure"
+  },
+  "nav": {
+    "newThread": "Workspace",
+    "discover": "Discover",
+    "voice": "Voice Studio",
+    "launch": "Launch",
+    "history": "History",
+    "traces": "Traces",
+    "templates": "Templates",
+    "settings": "Settings"
+  },
+  "deploy": {
+    "apiUnreachable": "Backend API is not reachable",
+    "apiUnreachableHint": "Set API_URL on Vercel to your deployed FastAPI URL (Render/Railway). Check /api/health and that the API service is running."
+  },
+  "brand": {
+    "title": "Editorial Engine",
+    "subtitle": "Adversarial OS"
+  },
+  "profile": {
+    "name": "Arman S.",
+    "plan": "Pro Plan"
+  },
+  "modes": {
+    "title": "Editor Modes",
+    "contrarian-vc": {
+      "label": "Contrarian VC",
+      "description": "Attack consensus, defend asymmetric insight"
+    },
+    "paul-graham": {
+      "label": "Paul Graham",
+      "description": "Essays and first-principles reflections"
+    },
+    "research-analyst": {
+      "label": "Research Analyst",
+      "description": "Deep-dive explainer with falsifiable claims"
+    }
+  },
+  "language": {
+    "uiLabel": "Interface language",
+    "outputLabel": "Thread output language",
+    "en": "English",
+    "ru": "Russian",
+    "kk": "Kazakh"
+  },
+  "dashboard": {
+    "title": "New Thread Generation",
+    "traceId": "TRACE ID",
+    "shareTrace": "Share Trace",
+    "saveDraft": "Save Draft",
+    "generateNew": "Generate New",
+    "pasteContext": "1. Paste Your Raw Context",
+    "contextPlaceholder": "Paste arXiv notes, HN thread, Substack draft…",
+    "characters": "{count} characters",
+    "clear": "Clear",
+    "selectMode": "2. Select Mode",
+    "outputLanguage": "Output language",
+    "contextLanguageHint": "For best results, paste context in the same language as the output language selected below.",
+    "generateThread": "Generate"
+  },
+  "formats": {
+    "thread": "Thread",
+    "quote_retweet": "Quote Retweet",
+    "essay": "Essay"
+  },
+  "discover": {
+    "title": "Content Discovery",
+    "subtitle": "Browse arXiv, Hacker News, Substack RSS, and curated tweets",
+    "searchPlaceholder": "Search topic…",
+    "search": "Search",
+    "useAsContext": "Use as context"
+  },
+  "voice": {
+    "title": "Voice Studio",
+    "subtitle": "Extract writing voice from samples — applied to rewrite and critic",
+    "namePlaceholder": "Profile name",
+    "samplesLabel": "Your writing samples",
+    "samplesPlaceholder": "Paste 1+ paragraphs of your real writing. Separate multiple samples with --- on its own line.",
+    "loadExample": "Load example text",
+    "charCount": "{count} characters (min. 50)",
+    "create": "Create voice profile",
+    "creating": "Analyzing voice…",
+    "createError": "Failed to create profile. Check API keys in .env.",
+    "savedProfiles": "Saved profiles",
+    "emptyList": "No voice profiles yet. Load the example or paste your own writing above.",
+    "exampleText": "Example in this voice",
+    "rhythm": "Sentence rhythm",
+    "opinion": "Opinion strength",
+    "vocabulary": "Vocabulary",
+    "taboo": "Avoid phrases",
+    "references": "Similar voices",
+    "copyId": "Copy ID"
+  },
+  "launch": {
+    "title": "Launch Queue",
+    "subtitle": "Mock X distribution — export and schedule drafts",
+    "empty": "No drafts queued yet. Generate content to populate the queue."
+  },
+  "pipeline": {
+    "title": "3. Cognitive Pipeline (Live)",
+    "reason": "Reason",
+    "retryLabel": "Retry #{attempt}",
+    "steps": {
+      "context_qualification_gate": "Context Gate",
+      "retrieval_agent": "Retrieval Agent",
+      "research_distiller": "Research Distiller",
+      "thesis_angles_generator": "Thesis Angles",
+      "thesis_commitment": "Thesis Commitment",
+      "narrative_architect": "Narrative Architect",
+      "high_pressure_rewriter": "High-Pressure Rewriter",
+      "deterministic_evaluators": "Deterministic Evaluators",
+      "anti_slop_critic": "Anti-Slop Critic",
+      "fact_checker": "Fact Checker",
+      "hook_generator": "Hook Generator",
+      "distribution_agent": "Distribution",
+      "thread_assembler": "Thread Assembler",
+      "refuse": "System Refusal"
+    },
+    "status": {
+      "pending": "PENDING",
+      "running": "RUNNING",
+      "done": "DONE",
+      "qualified": "QUALIFIED",
+      "borderline": "BORDERLINE",
+      "passed": "PASSED",
+      "approved": "APPROVED",
+      "rejected": "REJECTED",
+      "refused": "REFUSED",
+      "fail_closed": "FAIL CLOSED",
+      "retry": "RETRY"
+    }
+  },
+  "thread": {
+    "title": "4. Final Elite Thread",
+    "copyAll": "Copy All",
+    "refused": "Refused",
+    "refusedDefault": "Pipeline fail-closed — no weak thread published.",
+    "empty": "Generate a thread to see elite output here."
+  },
+  "stats": {
+    "title": "Thread Stats",
+    "tweets": "Tweets",
+    "characters": "Characters",
+    "signalDensity": "Signal Density",
+    "mechanisticLayers": "Mechanistic Layers",
+    "epistemicStatus": "Epistemic Status",
+    "preserved": "Preserved",
+    "degraded": "Degraded",
+    "badges": {
+      "openQuestion": "Open question preserved",
+      "uncertainty": "Uncertainty signals kept",
+      "noClosure": "No false closure"
+    }
+  },
+  "journey": {
+    "title": "5. Internal Trace & Cognitive Journey",
+    "rejectionHistory": "Rejection History",
+    "timeline": "Timeline",
+    "keyInsights": "Key Insights Extracted",
+    "noRejections": "No rejections",
+    "noTimeline": "No timeline data yet.",
+    "noInsights": "No insights extracted yet.",
+    "attemptLabel": "Attempt {n}",
+    "columns": {
+      "step": "Step",
+      "status": "Status",
+      "duration": "Duration",
+      "detail": "Detail"
+    }
+  },
+  "history": {
+    "title": "History & Traces",
+    "loading": "Loading traces…",
+    "empty": "No traces yet. Generate a thread first.",
+    "open": "Open",
+    "columns": {
+      "date": "Date",
+      "mode": "Mode",
+      "preview": "Preview",
+      "status": "Status",
+      "retries": "Retries"
+    },
+    "statusSuccess": "Success",
+    "statusRefused": "Refused"
+  },
+  "templates": {
+    "title": "Templates",
+    "create": "Create Template",
+    "save": "Save Template",
+    "loadTemplate": "Load in New Thread",
+    "placeholders": {
+      "name": "Template name",
+      "description": "Description",
+      "context": "Context (min 50 chars)"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "defaultMode": "Default Editor Mode",
+    "defaultOutputLanguage": "Default Output Language",
+    "apiBase": "API Base URL",
+    "apiHint": "Dev proxy rewrites /api → localhost:8000",
+    "thresholds": "Thresholds (read-only)",
+    "tracing": "Tracing",
+    "tracingLocal": "Local files",
+    "tracingLangfuse": "Langfuse cloud",
+    "thresholdKeys": {
+      "min_thesis_confidence": "Min thesis confidence",
+      "min_input_worthiness_score": "Min input worthiness score",
+      "min_specificity_score": "Min specificity score",
+      "min_anchor_preservation_ratio": "Min anchor preservation ratio",
+      "max_critic_retries": "Max critic retries",
+      "thread_min": "Minimum tweets",
+      "thread_max": "Maximum tweets",
+      "tweet_max_chars": "Max characters per tweet"
+    }
+  },
+  "errors": {
+    "contextTooShort": "Context must be at least 50 characters.",
+    "generateFailed": "Generation failed.",
+    "traceNotFound": "Trace not found.",
+    "loading": "Loading…",
+    "networkError": "Could not reach the API. Is the backend running?"
+  },
+  "common": {
+    "seconds": "{n}s",
+    "originalEvaluatorNote": "Evaluator reason (original)"
+  }
+}

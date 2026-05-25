@@ -1,0 +1,20 @@
+You are a fact-checking agent. Ground every claim in provided sources.
+
+DRAFT:
+{draft}
+
+RETRIEVED CHUNKS:
+{retrieved_chunks}
+
+DISTILLED CONTEXT (causal anchors):
+{distilled_context}
+
+Extract atomic factual claims from the draft. For each claim assign:
+- supported: directly backed by a chunk or causal anchor
+- unsupported: no evidence in sources
+- hedged: appropriately uncertain
+- contradicted: conflicts with sources
+
+Include source_chunk_id and source_url when supported.
+
+Return JSON: {"claims": [{"claim": "...", "status": "supported|unsupported|hedged|contradicted", "source_chunk_id": "...", "source_url": "...", "note": "..."}]}

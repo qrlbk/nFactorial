@@ -1,0 +1,15 @@
+кинул друг из biotech:
+
+"single-cell RNA-seq solved biology"
+
+lol no. we ran 40k cells/week and:
+- batch effects ate signal unless you fight chemistry every run
+- annotation is 70% manual curator time not compute
+- "cell types" move when you change reference atlas (2023 vs 2024 Human Cell Atlas)
+- cloud bill $12k/mo for pipeline that 2 postdocs could barely interpret
+
+maybe the moat is reference data + QC SOPs not sequencing depth?
+
+counter: "just scale to 10M cells" — ok but then you discover rare populations that are mostly doublets
+
+not sure anyone outside lab cares but feels like everyone fundraising says "multi-omics platform play"

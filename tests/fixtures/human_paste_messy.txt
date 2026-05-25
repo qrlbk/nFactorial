@@ -1,0 +1,14 @@
+everyone says remote work won permanently
+
+productivity up, talent global, office dead
+
+but our eng team metrics:
+- PR review time +40% since 2022
+- incident MTTR worse
+- new hire ramp 6mo -> 9mo
+- tacit knowledge loss when seniors leave
+
+maybe remote didn't fail - async coordination failed
+slack != hallway
+
+not sure if this is a thread worth writing tho kinda obvious?

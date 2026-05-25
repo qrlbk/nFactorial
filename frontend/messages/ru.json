@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "title": "Editorial Engine — Adversarial Editorial OS",
+    "description": "Превращайте плотный контекст в высокоинсайтовые X-треды с adversarial rejection pressure"
+  },
+  "nav": {
+    "newThread": "Рабочая область",
+    "discover": "Поиск",
+    "voice": "Voice Studio",
+    "launch": "Публикация",
+    "history": "История",
+    "traces": "Трейсы",
+    "templates": "Шаблоны",
+    "settings": "Настройки"
+  },
+  "deploy": {
+    "apiUnreachable": "Backend API недоступен",
+    "apiUnreachableHint": "На Vercel задайте API_URL — публичный URL FastAPI (Render/Railway). Проверьте /api/health и что API-сервис запущен."
+  },
+  "brand": {
+    "title": "Editorial Engine",
+    "subtitle": "Adversarial OS"
+  },
+  "profile": {
+    "name": "Arman S.",
+    "plan": "Pro Plan"
+  },
+  "modes": {
+    "title": "Режимы редактора",
+    "contrarian-vc": {
+      "label": "Contrarian VC",
+      "description": "Атаковать консенсус, защищать асимметричный инсайт"
+    },
+    "paul-graham": {
+      "label": "Paul Graham",
+      "description": "Эссе и размышления от первых принципов"
+    },
+    "research-analyst": {
+      "label": "Research Analyst",
+      "description": "Глубокий разбор с проверяемыми утверждениями"
+    }
+  },
+  "language": {
+    "uiLabel": "Язык интерфейса",
+    "outputLabel": "Язык генерации треда",
+    "en": "Английский",
+    "ru": "Русский",
+    "kk": "Казахский"
+  },
+  "dashboard": {
+    "title": "Генерация нового треда",
+    "traceId": "TRACE ID",
+    "shareTrace": "Поделиться трейсом",
+    "saveDraft": "Сохранить черновик",
+    "generateNew": "Новая генерация",
+    "pasteContext": "1. Вставьте сырой контекст",
+    "contextPlaceholder": "Вставьте заметки arXiv, тред HN, черновик Substack…",
+    "characters": "{count} символов",
+    "clear": "Очистить",
+    "selectMode": "2. Выберите режим",
+    "outputLanguage": "Язык генерации",
+    "contextLanguageHint": "Для лучшего результата вставляйте контекст на том же языке, что и язык генерации ниже.",
+    "generateThread": "Сгенерировать"
+  },
+  "formats": {
+    "thread": "Тред",
+    "quote_retweet": "Quote Retweet",
+    "essay": "Эссе"
+  },
+  "discover": {
+    "title": "Поиск контента",
+    "subtitle": "arXiv, Hacker News, Substack RSS и кураторские твиты",
+    "searchPlaceholder": "Тема поиска…",
+    "search": "Искать",
+    "useAsContext": "Использовать как контекст"
+  },
+  "voice": {
+    "title": "Voice Studio",
+    "subtitle": "Извлечение голоса из writing samples для rewrite и critic",
+    "namePlaceholder": "Название профиля",
+    "samplesLabel": "Ваши образцы текста",
+    "samplesPlaceholder": "Вставьте 1+ абзаца своего текста. Несколько образцов разделяйте строкой ---",
+    "loadExample": "Подставить пример",
+    "charCount": "{count} символов (мин. 50)",
+    "create": "Создать voice profile",
+    "creating": "Анализ голоса…",
+    "createError": "Не удалось создать профиль. Проверьте API keys в .env.",
+    "savedProfiles": "Сохранённые профили",
+    "emptyList": "Профилей пока нет. Подставьте пример или вставьте свой текст выше.",
+    "exampleText": "Пример в этом голосе",
+    "rhythm": "Ритм предложений",
+    "opinion": "Сила мнения",
+    "vocabulary": "Словарь",
+    "taboo": "Избегать фраз",
+    "references": "Похожие авторы",
+    "copyId": "Копировать ID"
+  },
+  "launch": {
+    "title": "Очередь публикации",
+    "subtitle": "Mock X distribution — экспорт и расписание",
+    "empty": "Очередь пуста. Сгенерируйте контент, чтобы добавить черновики."
+  },
+  "pipeline": {
+    "title": "3. Когнитивный pipeline (live)",
+    "reason": "Причина",
+    "retryLabel": "Повтор #{attempt}",
+    "steps": {
+      "context_qualification_gate": "Контекстный фильтр",
+      "retrieval_agent": "Retrieval Agent",
+      "research_distiller": "Дистиллятор исследования",
+      "thesis_angles_generator": "Углы тезиса",
+      "thesis_commitment": "Фиксация тезиса",
+      "narrative_architect": "Архитектор narrative",
+      "high_pressure_rewriter": "Rewriter под давлением",
+      "deterministic_evaluators": "Детерминированные evaluators",
+      "anti_slop_critic": "Anti-slop critic",
+      "fact_checker": "Фактчекер",
+      "hook_generator": "Генератор хуков",
+      "distribution_agent": "Дистрибуция",
+      "thread_assembler": "Сборщик треда",
+      "refuse": "Системный отказ"
+    },
+    "status": {
+      "pending": "ОЖИДАНИЕ",
+      "running": "В ПРОЦЕССЕ",
+      "done": "ГОТОВО",
+      "qualified": "КВАЛИФИЦИРОВАН",
+      "borderline": "ПОГРАНИЧНЫЙ",
+      "passed": "ПРОЙДЕНО",
+      "approved": "ОДОБРЕНО",
+      "rejected": "ОТКЛОНЕНО",
+      "refused": "ОТКАЗ",
+      "fail_closed": "ЗАКРЫТО",
+      "retry": "ПОВТОР"
+    }
+  },
+  "thread": {
+    "title": "4. Финальный elite thread",
+    "copyAll": "Копировать всё",
+    "refused": "Отклонено",
+    "refusedDefault": "Pipeline fail-closed — слабый тред не опубликован.",
+    "empty": "Сгенерируйте тред, чтобы увидеть результат."
+  },
+  "stats": {
+    "title": "Статистика треда",
+    "tweets": "Твиты",
+    "characters": "Символы",
+    "signalDensity": "Плотность сигнала",
+    "mechanisticLayers": "Механистические слои",
+    "epistemicStatus": "Эпистемический статус",
+    "preserved": "Сохранено",
+    "degraded": "Деградировано",
+    "badges": {
+      "openQuestion": "Открытый вопрос сохранён",
+      "uncertainty": "Сигналы неопределённости сохранены",
+      "noClosure": "Без ложного закрытия"
+    }
+  },
+  "journey": {
+    "title": "5. Внутренний trace и cognitive journey",
+    "rejectionHistory": "История отклонений",
+    "timeline": "Timeline",
+    "keyInsights": "Извлечённые ключевые инсайты",
+    "noRejections": "Отклонений нет",
+    "noTimeline": "Данных timeline пока нет.",
+    "noInsights": "Инсайты ещё не извлечены.",
+    "attemptLabel": "Попытка {n}",
+    "columns": {
+      "step": "Шаг",
+      "status": "Статус",
+      "duration": "Длительность",
+      "detail": "Детали"
+    }
+  },
+  "history": {
+    "title": "История и трейсы",
+    "loading": "Загрузка трейсов…",
+    "empty": "Трейсов пока нет. Сначала сгенерируйте тред.",
+    "open": "Открыть",
+    "columns": {
+      "date": "Дата",
+      "mode": "Режим",
+      "preview": "Превью",
+      "status": "Статус",
+      "retries": "Повторы"
+    },
+    "statusSuccess": "Успех",
+    "statusRefused": "Отказ"
+  },
+  "templates": {
+    "title": "Шаблоны",
+    "create": "Создать шаблон",
+    "save": "Сохранить шаблон",
+    "loadTemplate": "Загрузить в новый тред",
+    "placeholders": {
+      "name": "Название шаблона",
+      "description": "Описание",
+      "context": "Контекст (мин. 50 символов)"
+    }
+  },
+  "settings": {
+    "title": "Настройки",
+    "defaultMode": "Режим редактора по умолчанию",
+    "defaultOutputLanguage": "Язык генерации по умолчанию",
+    "apiBase": "API Base URL",
+    "apiHint": "Dev proxy: /api → localhost:8000",
+    "thresholds": "Пороги (только чтение)",
+    "tracing": "Tracing",
+    "tracingLocal": "Локальные файлы",
+    "tracingLangfuse": "Langfuse cloud",
+    "thresholdKeys": {
+      "min_thesis_confidence": "Мин. уверенность тезиса",
+      "min_input_worthiness_score": "Мин. оценка worthiness входа",
+      "min_specificity_score": "Мин. specificity score",
+      "min_anchor_preservation_ratio": "Мин. сохранение anchors",
+      "max_critic_retries": "Макс. повторов critic",
+      "thread_min": "Минимум твитов",
+      "thread_max": "Максимум твитов",
+      "tweet_max_chars": "Макс. символов на твит"
+    }
+  },
+  "errors": {
+    "contextTooShort": "Контекст должен быть не менее 50 символов.",
+    "generateFailed": "Генерация не удалась.",
+    "traceNotFound": "Трейс не найден.",
+    "loading": "Загрузка…",
+    "networkError": "Не удалось связаться с API. Запущен ли backend?"
+  },
+  "common": {
+    "seconds": "{n}с",
+    "originalEvaluatorNote": "Причина evaluator (оригинал)"
+  }
+}

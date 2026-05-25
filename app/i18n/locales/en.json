@@ -1,0 +1,67 @@
+{
+  "refusal": {
+    "epistemic": "Generation refused.\nReason:\nInput lacks sufficient intellectual tension, operational detail, or falsifiable observations to produce a high-density editorial thread.",
+    "thesis": "Generation refused.\nReason:\nThesis confidence too low — system detected invented cognition rather than derived insight from input material.",
+    "retry": "Generation failed.\nReason:\nSystem could not derive a sufficiently novel thesis from provided context.",
+    "quality_exhausted": "Generation failed.\nReason:\nDraft did not pass quality gates before publish.",
+    "last_failure": "Last failure: {reason}",
+    "retries_exhausted": "Retries exhausted ({count} attempts)."
+  },
+  "stats": {
+    "density": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    }
+  },
+  "modes": {
+    "contrarian-vc": {
+      "label": "Contrarian VC",
+      "description": "Attack consensus, defend asymmetric insight"
+    },
+    "paul-graham": {
+      "label": "Paul Graham",
+      "description": "Essays and first-principles reflections"
+    },
+    "research-analyst": {
+      "label": "Research Analyst",
+      "description": "Deep-dive explainer with falsifiable claims"
+    }
+  },
+  "pipeline": {
+    "detail": {
+      "gate_refused": "Input refused at gate",
+      "gate_worthiness": "Worthiness score: {score}",
+      "research": "{anchors} anchors extracted, {questions} open questions",
+      "thesis_confidence": "Confidence: {confidence}",
+      "thesis_committed": "Thesis committed",
+      "narrative": "{points} escalation points mapped",
+      "rewrite": "{count} tweets — {label}",
+      "rewrite_draft": "Draft complete",
+      "rewrite_retry": "Retry #{attempt}",
+      "eval_passed": "All deterministic gates passed",
+      "eval_rejected": "Evaluator rejection",
+      "critic_approved": "Approved",
+      "critic_slop": "Slop: {phrases}",
+      "fail_closed": "Fail closed",
+      "quality_failed": "Quality gates failed — draft not published",
+      "assembled": "{count} tweets assembled"
+    }
+  },
+  "language": {
+    "en": "English",
+    "ru": "Russian",
+    "kk": "Kazakh"
+  },
+  "evaluator": {
+    "mechanism_layers": "Mechanism layers {layers} below minimum {minimum}",
+    "defended_overlap": "Defended claim overlap {overlap} below {minimum}",
+    "specificity": "Specificity score {score} below {minimum} (need numbers, named systems, or operational nouns)",
+    "relation_drift_comparison": "Relation drift tweet {tweet}: '{value}' ({metric}) attributed near '{comparison}' but subject '{subject}' missing",
+    "relation_drift_subject": "Relation drift tweet {tweet}: '{value}' used without anchor subject '{subject}'",
+    "thread_min": "Thread has {count} tweets, minimum is {minimum}",
+    "thread_max": "Thread has {count} tweets, maximum is {maximum}",
+    "tweet_chars": "Tweet {index} exceeds {maximum} characters",
+    "abstract_density": "Abstract noun density {density} exceeds {maximum}"
+  }
+}

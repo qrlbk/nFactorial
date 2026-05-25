@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "title": "Editorial Engine — Adversarial Editorial OS",
+    "description": "Тығыз контекстті adversarial rejection pressure арқылы жоғары инсайтты X thread-терге айналдырыңыз"
+  },
+  "nav": {
+    "newThread": "Жұмыс алаңы",
+    "discover": "Іздеу",
+    "voice": "Voice Studio",
+    "launch": "Жариялау",
+    "history": "Тарих",
+    "traces": "Trace-тер",
+    "templates": "Үлгілер",
+    "settings": "Баптаулар"
+  },
+  "deploy": {
+    "apiUnreachable": "Backend API қолжетімсіз",
+    "apiUnreachableHint": "Vercel-де API_URL орнатыңыз — FastAPI-дың жалпыға ашық URL (Render/Railway). /api/health және API сервисінің іске қосылғанын тексеріңіз."
+  },
+  "brand": {
+    "title": "Editorial Engine",
+    "subtitle": "Adversarial OS"
+  },
+  "profile": {
+    "name": "Arman S.",
+    "plan": "Pro Plan"
+  },
+  "modes": {
+    "title": "Editor режимдері",
+    "contrarian-vc": {
+      "label": "Contrarian VC",
+      "description": "Consensus-қа шабуыл, асимметриялы инсайтты қорғау"
+    },
+    "paul-graham": {
+      "label": "Paul Graham",
+      "description": "Эсселер және бірінші принциптерден ой толғау"
+    },
+    "research-analyst": {
+      "label": "Research Analyst",
+      "description": "Тексерілетін claim-мен терең талдау"
+    }
+  },
+  "language": {
+    "uiLabel": "Интерфейс тілі",
+    "outputLabel": "Thread генерация тілі",
+    "en": "Ағылшын",
+    "ru": "Орыс",
+    "kk": "Қазақ"
+  },
+  "dashboard": {
+    "title": "Жаңа thread генерациясы",
+    "traceId": "TRACE ID",
+    "shareTrace": "Trace бөлісу",
+    "saveDraft": "Draft сақтау",
+    "generateNew": "Жаңа генерация",
+    "pasteContext": "1. Шикі контекстті қойыңыз",
+    "contextPlaceholder": "arXiv notes, HN thread, Substack draft…",
+    "characters": "{count} таңба",
+    "clear": "Тазалау",
+    "selectMode": "2. Режимді таңдаңыз",
+    "outputLanguage": "Генерация тілі",
+    "contextLanguageHint": "Жақсы нәтиже үшін контекстті төмендегі генерация тілімен бірдей тілде қойыңыз.",
+    "generateThread": "Генерациялау"
+  },
+  "formats": {
+    "thread": "Thread",
+    "quote_retweet": "Quote Retweet",
+    "essay": "Эссе"
+  },
+  "discover": {
+    "title": "Контент іздеу",
+    "subtitle": "arXiv, Hacker News, Substack RSS және кураторлық твиттер",
+    "searchPlaceholder": "Тақырып…",
+    "search": "Іздеу",
+    "useAsContext": "Контекст ретінде қолдану"
+  },
+  "voice": {
+    "title": "Voice Studio",
+    "subtitle": "Writing samples-тан дауыс профилін шығару",
+    "namePlaceholder": "Профиль атауы",
+    "samplesLabel": "Мәтін үлгілері",
+    "samplesPlaceholder": "1+ абзац өз мәтініңізді қойыңыз. Бірнеше үлгіні --- жолымен бөліңіз.",
+    "loadExample": "Мысал мәтінді жүктеу",
+    "charCount": "{count} таңба (мин. 50)",
+    "create": "Voice profile жасау",
+    "creating": "Дауыс талдануда…",
+    "createError": "Профиль жасалмады. .env ішіндегі API кілттерін тексеріңіз.",
+    "savedProfiles": "Сақталған профильдер",
+    "emptyList": "Профиль жоқ. Жоғарыда мысалды жүктеңіз немесе өз мәтініңізді қойыңыз.",
+    "exampleText": "Осы дауыстағы мысал",
+    "rhythm": "Сөйлем ритмі",
+    "opinion": "Пікір күші",
+    "vocabulary": "Сөздік",
+    "taboo": "Қолданбау керек",
+    "references": "Ұқсас авторлар",
+    "copyId": "ID көшіру"
+  },
+  "launch": {
+    "title": "Жариялау кезегі",
+    "subtitle": "Mock X distribution — экспорт және кесте",
+    "empty": "Кезек бос. Контент генерациялаңыз."
+  },
+  "pipeline": {
+    "title": "3. Когнитивті pipeline (live)",
+    "reason": "Себебі",
+    "retryLabel": "Қайталау #{attempt}",
+    "steps": {
+      "context_qualification_gate": "Контекст тексеруі",
+      "retrieval_agent": "Retrieval агенті",
+      "research_distiller": "Зерттеу дистилляторы",
+      "thesis_angles_generator": "Тезис бұрыштары",
+      "thesis_commitment": "Тезис бекітілуі",
+      "narrative_architect": "Оқиға архитекторы",
+      "high_pressure_rewriter": "Қысым астындағы редактор",
+      "deterministic_evaluators": "Анықтауыш модульдері",
+      "anti_slop_critic": "Slop сыншысы",
+      "fact_checker": "Фактчекер",
+      "hook_generator": "Hook генераторы",
+      "distribution_agent": "Дистрибуция",
+      "thread_assembler": "Thread жинауышы",
+      "refuse": "Жүйелік бас тарту"
+    },
+    "status": {
+      "pending": "КҮТУ",
+      "running": "ОРЫНДАЛУДА",
+      "done": "ДАЙЫН",
+      "qualified": "САПАЛАНДЫ",
+      "borderline": "ШЕКАРАЛЫ",
+      "passed": "ӨТТІ",
+      "approved": "МАҚҰЛДАНДЫ",
+      "rejected": "ҚАБЫЛДАНБАДЫ",
+      "refused": "БАС ТАРТЫЛДЫ",
+      "fail_closed": "ЖАБЫЛДЫ",
+      "retry": "ҚАЙТАЛАУ"
+    }
+  },
+  "thread": {
+    "title": "4. Финалдық elite thread",
+    "copyAll": "Барлығын көшіру",
+    "refused": "Қабылданбады",
+    "refusedDefault": "Pipeline fail-closed — әлсіз thread жарияланбады.",
+    "empty": "Нәтижені көру үшін thread генерациялаңыз."
+  },
+  "stats": {
+    "title": "Thread статистикасы",
+    "tweets": "Твиттер",
+    "characters": "Таңбалар",
+    "signalDensity": "Сигнал тығыздығы",
+    "mechanisticLayers": "Механистік қабаттар",
+    "epistemicStatus": "Эпистемикалық статус",
+    "preserved": "Сақталды",
+    "degraded": "Бузылды",
+    "badges": {
+      "openQuestion": "Ашық сұрақ сақталды",
+      "uncertainty": "Белгісіздік сигналдары сақталды",
+      "noClosure": "Жалған жабылу жоқ"
+    }
+  },
+  "journey": {
+    "title": "5. Ішкі trace және cognitive journey",
+    "rejectionHistory": "Қабылдамау тарихы",
+    "timeline": "Timeline",
+    "keyInsights": "Шығарылған негізгі инсайттар",
+    "noRejections": "Қабылдамаулар жоқ",
+    "noTimeline": "Timeline деректері жоқ.",
+    "noInsights": "Инсайттар әлі шығарылмады.",
+    "attemptLabel": "Әрекет {n}",
+    "columns": {
+      "step": "Қадам",
+      "status": "Статус",
+      "duration": "Ұзақтығы",
+      "detail": "Деталь"
+    }
+  },
+  "history": {
+    "title": "Тарих және trace-тер",
+    "loading": "Trace-тер жүктелуде…",
+    "empty": "Trace-тер әлі жоқ. Алдымен thread генерациялаңыз.",
+    "open": "Ашу",
+    "columns": {
+      "date": "Күні",
+      "mode": "Режим",
+      "preview": "Превью",
+      "status": "Статус",
+      "retries": "Қайталаулар"
+    },
+    "statusSuccess": "Сәтті",
+    "statusRefused": "Бас тарту"
+  },
+  "templates": {
+    "title": "Үлгілер",
+    "create": "Үлгі жасау",
+    "save": "Үлгіні сақтау",
+    "loadTemplate": "Жаңа thread-ке жүктеу",
+    "placeholders": {
+      "name": "Үлгі атауы",
+      "description": "Сипаттама",
+      "context": "Контекст (мин. 50 таңба)"
+    }
+  },
+  "settings": {
+    "title": "Баптаулар",
+    "defaultMode": "Әдепкі editor режимі",
+    "defaultOutputLanguage": "Әдепкі генерация тілі",
+    "apiBase": "API Base URL",
+    "apiHint": "Dev proxy: /api → localhost:8000",
+    "thresholds": "Порогтар (тек оқу)",
+    "tracing": "Tracing",
+    "tracingLocal": "Локалдық файлдар",
+    "tracingLangfuse": "Langfuse cloud",
+    "thresholdKeys": {
+      "min_thesis_confidence": "Мин. тезис сенімділігі",
+      "min_input_worthiness_score": "Мин. кіріс worthiness бағасы",
+      "min_specificity_score": "Мин. specificity бағасы",
+      "min_anchor_preservation_ratio": "Мин. anchor сақтау коэффициенті",
+      "max_critic_retries": "Макс. critic қайталаулары",
+      "thread_min": "Минимум твит",
+      "thread_max": "Максимум твит",
+      "tweet_max_chars": "Твитке макс. таңба"
+    }
+  },
+  "errors": {
+    "contextTooShort": "Контекст кемінде 50 таңба болуы керек.",
+    "generateFailed": "Генерация сәтсіз аяқталды.",
+    "traceNotFound": "Trace табылмады.",
+    "loading": "Жүктелуде…",
+    "networkError": "API-ға қосылу мүмкін болмады. Backend іске қосылған ба?"
+  },
+  "common": {
+    "seconds": "{n}с",
+    "originalEvaluatorNote": "Evaluator себебі (түпнұсқа)"
+  }
+}

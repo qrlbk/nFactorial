@@ -1,0 +1,15 @@
+.venv
+venv
+frontend
+.git
+.pytest_cache
+data/traces
+data/chunks
+data/discovery
+data/launch_queue
+data/memory
+data/uploads
+.env
+*.md
+!README.md
+.cursor

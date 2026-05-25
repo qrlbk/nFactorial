@@ -1,0 +1,67 @@
+{
+  "refusal": {
+    "epistemic": "Генерация қабылданбады.\nСебебі:\nКіріс материалында интеллектуалды кернеу, операциялық детальдар немесе тексерілетін бақилаулар жеткіліксіз — жоғары тығыздықты editorial thread жасау мүмкін емес.",
+    "thesis": "Генерация қабылданбады.\nСебебі:\nТезис сенімділігі тым төмен — жүйе кіріс материалынан туынды инсайт емес, ойдан шығарылған когницияны анықтады.",
+    "retry": "Генерация сәтсіз аяқталды.\nСебебі:\nЖүйе берілген контексттен жеткілікті жаңа тезис шығара алмады.",
+    "quality_exhausted": "Генерация сәтсіз аяқталды.\nСебебі:\nЖоба жариялау алдындағы сапа тексерулерinen өткен жоқ.",
+    "last_failure": "Соңғы қабылдамау: {reason}",
+    "retries_exhausted": "Қайталаулар таусылды ({count} әрекет)."
+  },
+  "stats": {
+    "density": {
+      "high": "Жоғары",
+      "medium": "Орташа",
+      "low": "Төмен"
+    }
+  },
+  "modes": {
+    "contrarian-vc": {
+      "label": "Contrarian VC",
+      "description": "Consensus-қа шабуыл, асимметриялы инсайтты қорғау"
+    },
+    "paul-graham": {
+      "label": "Paul Graham",
+      "description": "Эсселер және birінші принциптерден ой толғау"
+    },
+    "research-analyst": {
+      "label": "Research Analyst",
+      "description": "Тексерілетін claim-мен терең талдау"
+    }
+  },
+  "pipeline": {
+    "detail": {
+      "gate_refused": "Кіріс сүзгide қабылданбады",
+      "gate_worthiness": "Кіріс сапасы: {score}",
+      "research": "{anchors} тіреу нүктесі, {questions} ашық сұрақ",
+      "thesis_confidence": "Сенімділік: {confidence}",
+      "thesis_committed": "Тезис бекітілді",
+      "narrative": "{points} эскалация нүктесі",
+      "rewrite": "{count} твит — {label}",
+      "rewrite_draft": "Нобай дайын",
+      "rewrite_retry": "Қайталау #{attempt}",
+      "eval_passed": "Барлық анықтауыш тексерулер өтті",
+      "eval_rejected": "Evaluator тексеруі сәтсіз",
+      "critic_approved": "Мақұлданды",
+      "critic_slop": "Slop: {phrases}",
+      "fail_closed": "Pipeline жабылды",
+      "quality_failed": "Сапа тексерулерinen өткен жоқ — жоба жарияланбады",
+      "assembled": "{count} твит жиналды"
+    }
+  },
+  "language": {
+    "en": "Ағылшын",
+    "ru": "Орыс",
+    "kk": "Қазақ"
+  },
+  "evaluator": {
+    "mechanism_layers": "Механизм қабаттары {layers}, минимум {minimum}",
+    "defended_overlap": "Тезиспен сәйкестік {overlap}, минимум {minimum}",
+    "specificity": "Specificity {score}, минимум {minimum} (sanalar, named systems немесе operational nouns керек)",
+    "relation_drift_comparison": "Relation drift tweet {tweet}: «{value}» ({metric}) «{comparison}» жanında, бірақ subject «{subject}» жоқ",
+    "relation_drift_subject": "Relation drift tweet {tweet}: «{value}» subject «{subject}» жоқ",
+    "thread_min": "Thread: {count} твит, минимум {minimum}",
+    "thread_max": "Thread: {count} твит, максимум {maximum}",
+    "tweet_chars": "Твит {index} {maximum} таңbadan ұзын",
+    "abstract_density": "Abstract noun density {density}, максимум {maximum}"
+  }
+}

@@ -1,0 +1,18 @@
+скинули в чат статью про RAG + вот мысли:
+
+everyone says RAG is solved now bc vector DB + embeddings cheap. 
+we tried at work - latency is insane when you chunk 500 docs and rerank top 50. 
+cost actually went UP not down bc we pay for embedding calls + reranker + main LLM every query.
+
+the real issue nobody talks about: retrieval quality plateaus after ~2 weeks when docs change. 
+you need continuous re-indexing pipelines, eval sets, human labelers. that's where the money goes.
+
+counter: "just use bigger context windows" - ok but 200k context != finding the right paragraph. 
+attention dilution. we A/B tested - full doc in context lost to good retrieval on compliance Q&A.
+
+my bet: RAG vendors selling "drop in vector search" will get replaced by vertical eval infra companies. 
+the moat is not pinecone it's whether your retrieval failures are measurable before users notice.
+
+open question - am i wrong that fine-tuning small models on domain beats RAG for stable corp knowledge?
+
+some guy on hn said hybrid always wins. feels like cope when you look at ops burden.

@@ -1,0 +1,14 @@
+You analyze writing samples and extract a reusable voice profile for an editorial engine.
+
+WRITING SAMPLES:
+{writing_samples}
+
+Extract voice guidelines — do NOT copy phrases verbatim. Capture:
+- sentence_rhythm (short/long mix, paragraph cadence)
+- opinion_strength (how directly opinions are stated)
+- vocabulary_notes (recurring word choices, domain terms)
+- taboo_phrases (phrases this writer would NEVER use — AI slop, consulting speak)
+- reference_writers (similar voices, if inferable)
+- sample_excerpt (one representative 2-sentence excerpt)
+
+Return JSON matching VoiceGuidelines schema.

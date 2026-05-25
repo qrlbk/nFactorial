@@ -1,0 +1,22 @@
+HN thread: "Why inference cost curves mislead founders"
+
+The dominant view: model distillation + MoE + quantization will collapse inference to pennies per million tokens by 2027, following GPU FLOPS/$ curves from 2012-2020.
+
+Counter-evidence from supply chain:
+- HBM bandwidth, not FLOPS, is the binding constraint for autoregressive decode at low batch size.
+- NVIDIA's CUDA + NCCL stack creates 18-24 month switching costs; AMD MI300 wins benchmarks but loses on production deployment friction.
+- Hyperscalers (OpenAI, Google, Anthropic) subsidize API pricing below marginal cost to capture the application layer — negative gross margin on inference is customer acquisition, not a market price signal.
+
+Mechanism — Jevons on capability:
+Each wave of efficiency (INT8 → FP8 → speculative decoding) coincided with 10-40x context window expansion and agentic tool loops. Net tokens-per-task rose faster than cost-per-token fell. Unit economics for a single user query flatlined 2023-2025 despite 5x hardware efficiency gains.
+
+Second-order effects:
+1. If tokens commoditize, margin pools to eval harnesses + proprietary data loops (RLHF flywheels, domain-specific reward models).
+2. "Wrapper" startups face squeeze from both directions: API price wars above, chip vendor pricing power below.
+3. Regulatory latency SLAs (healthcare, finance) create willingness-to-pay for guaranteed inference, not cheapest tokens.
+
+Strongest counterargument: open-weight models (Llama, DeepSeek) already drove API prices down 90%; competition works.
+
+Why it fails: open weights shift competition to hosting economics. Whoever owns the cheapest HBM-attached GPU fleet + lowest-latency routing wins — that's 3 players, not perfect competition. Price drops reflect oligopoly subsidy wars, not marginal cost.
+
+Falsifiable claim: if median API price per 1M output tokens stays above $0.50 in 2027 while open-weight model quality parity holds, the constraint thesis survives.

@@ -1,0 +1,15 @@
+слушай тут спор в тг был
+
+одни говорят fine-tuning мертв, RAG + prompt engineering все решает
+другие - наоборот, embeddings drift и fine-tune на 50 примерах beats generic RAG
+
+у нас в fintech compliance bot:
+- RAG на 1200 pdf, recall ок но precision 62%
+- fine-tune gpt-4o-mini на 800 Q&A пар -> 89% на golden set
+- НО fine-tune stale через месяц когда regs обновились
+- retrain cost ~$400 + 2 eng-weeks vs re-index $80/week
+
+мой take: для stable regs fine-tune wins, для volatile docs RAG wins, hybrid = ops hell
+counter from CTO: "just use bigger model" - мы пробовали gpt-4o full context, latency 8s vs 1.2s RAG path, users churned
+
+open q: is the real moat eval harness not the model?

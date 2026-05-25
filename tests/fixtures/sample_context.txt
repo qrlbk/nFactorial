@@ -1,0 +1,11 @@
+Hacker News discussion: "Why LLM inference costs won't follow Moore's Law"
+
+Top comment argues that model efficiency gains will drive inference to near-zero marginal cost within 3 years, citing historical GPU price curves and distillation research.
+
+Counter-thread: Chip supply is physically constrained. NVIDIA's pricing power comes from CUDA lock-in, not transistor density. Every 10x model capability increase has been matched by 10x parameter count — Jevons paradox for compute. Enterprises don't pay for tokens; they pay for latency SLAs under regulatory audit requirements.
+
+Key tension: efficiency gains get eaten by capability expansion. Inference pricing is a coordination game between hyperscalers who subsidize API costs to capture developer mindshare, while actual unit economics remain negative for non-vertically-integrated players.
+
+Second-order: If inference commoditizes, the moat shifts to data flywheels and evaluation infrastructure — not the model itself. Startups building "GPT wrappers" face margin compression from both directions.
+
+Falsifiable: If inference cost per token drops 100x in 24 months without proportional demand expansion, the constraint thesis fails.

@@ -1,0 +1,67 @@
+{
+  "refusal": {
+    "epistemic": "Генерация отклонена.\nПричина:\nВход не содержит достаточного интеллектуального напряжения, операционных деталей или проверяемых наблюдений для высокоплотного editorial-треда.",
+    "thesis": "Генерация отклонена.\nПричина:\nСлишком низкая уверенность тезиса — система обнаружила выдуманную когницию, а не вывод из входного материала.",
+    "retry": "Генерация не удалась.\nПричина:\nСистема не смогла вывести достаточно новый тезис из предоставленного контекста.",
+    "quality_exhausted": "Генерация не удалась.\nПричина:\nЧерновик не прошёл проверки качества перед публикацией.",
+    "last_failure": "Последний отказ: {reason}",
+    "retries_exhausted": "Повторы исчерпаны ({count} попыток)."
+  },
+  "stats": {
+    "density": {
+      "high": "Высокая",
+      "medium": "Средняя",
+      "low": "Низкая"
+    }
+  },
+  "modes": {
+    "contrarian-vc": {
+      "label": "Contrarian VC",
+      "description": "Атаковать консенсус, защищать асимметричный инсайт"
+    },
+    "paul-graham": {
+      "label": "Paul Graham",
+      "description": "Эссе и размышления от первых принципов"
+    },
+    "research-analyst": {
+      "label": "Research Analyst",
+      "description": "Глубокий разбор с проверяемыми утверждениями"
+    }
+  },
+  "pipeline": {
+    "detail": {
+      "gate_refused": "Вход отклонён на фильтре",
+      "gate_worthiness": "Оценка качества входа: {score}",
+      "research": "Извлечено {anchors} якорей, {questions} открытых вопросов",
+      "thesis_confidence": "Уверенность: {confidence}",
+      "thesis_committed": "Тезис зафиксирован",
+      "narrative": "{points} точек эскалации",
+      "rewrite": "{count} твитов — {label}",
+      "rewrite_draft": "Черновик готов",
+      "rewrite_retry": "Повтор #{attempt}",
+      "eval_passed": "Все детерминированные проверки пройдены",
+      "eval_rejected": "Отклонено evaluators",
+      "critic_approved": "Одобрено",
+      "critic_slop": "Slop: {phrases}",
+      "fail_closed": "Pipeline закрыт",
+      "quality_failed": "Сапа gates не пройдены — черновик не опубликован",
+      "assembled": "{count} твитов собрано"
+    }
+  },
+  "language": {
+    "en": "Английский",
+    "ru": "Русский",
+    "kk": "Казахский"
+  },
+  "evaluator": {
+    "mechanism_layers": "Механизмов {layers}, минимум {minimum}",
+    "defended_overlap": "Пересечение с тезисом {overlap}, минимум {minimum}",
+    "specificity": "Specificity {score}, минимум {minimum} (нужны цифры, named systems или operational nouns)",
+    "relation_drift_comparison": "Relation drift tweet {tweet}: «{value}» ({metric}) у «{comparison}», но subject «{subject}» отсутствует",
+    "relation_drift_subject": "Relation drift tweet {tweet}: «{value}» без subject «{subject}»",
+    "thread_min": "Тред: {count} твитов, минимум {minimum}",
+    "thread_max": "Тред: {count} твитов, максимум {maximum}",
+    "tweet_chars": "Твит {index} длиннее {maximum} символов",
+    "abstract_density": "Abstract noun density {density}, максимум {maximum}"
+  }
+}
