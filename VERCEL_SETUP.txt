@@ -6,7 +6,11 @@ VERCEL DEPLOY — follow exactly or build fails.
   Framework Preset: Next.js
   Node.js Version:   20.x (optional, default OK)
 
-Do NOT leave Root Directory empty. There is no root vercel.json anymore.
+Root vercel.json only sets framework: nextjs (overrides pyproject.toml → FastAPI).
+
+If build says "No FastAPI entrypoint" → Framework was wrong. Set Next.js + Root Directory frontend.
+
+Do NOT leave Root Directory empty.
 
 === Environment ===
 
