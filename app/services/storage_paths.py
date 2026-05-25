@@ -1,8 +1,17 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
-DATA_ROOT = Path(__file__).resolve().parent.parent.parent / "data"
+
+def _resolve_data_root() -> Path:
+    """Use /tmp on read-only serverless (e.g. mistaken Vercel Python deploy)."""
+    if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
+        return Path("/tmp/editorial-engine-data")
+    return Path(__file__).resolve().parent.parent.parent / "data"
+
+
+DATA_ROOT = _resolve_data_root()
 
 CHUNKS_DIR = DATA_ROOT / "chunks"
 VOICES_DIR = DATA_ROOT / "voices"

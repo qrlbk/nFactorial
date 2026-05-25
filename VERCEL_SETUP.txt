@@ -1,14 +1,22 @@
-BEST (pick one):
+VERCEL = Next.js UI ONLY. Python API = Render (editorial-engine-api.onrender.com).
 
-  A) Settings → General → Root Directory: frontend
-     (then use frontend/vercel.json only; remove custom root build hacks)
+=== REQUIRED (Dashboard) ===
 
-  B) Root Directory empty — vercel.json builds in frontend/ and symlinks
-     .next to repo root so Vercel finds /vercel/path0/.next
+1. Settings → General → Framework Preset: Next.js  (NOT Python)
+2. Settings → General → Root Directory: frontend   (strongly recommended)
+3. Settings → Environment → API_URL = https://editorial-engine-api.onrender.com
+4. Deployments → Redeploy → Clear build cache
 
-Root package.json lists "next" for framework detection only.
+=== If you see "could not import app/main.py" ===
 
-Then: Deployments → Redeploy → Clear build cache
-Environment: API_URL = https://YOUR-RENDER-API.onrender.com
+Vercel is deploying the FastAPI backend by mistake.
+- Set Framework to Next.js
+- Set Root Directory to frontend
+- Repo .vercelignore excludes app/ and pyproject.toml
 
-Test: https://n-factorial.vercel.app/en  (must return 200)
+=== Test ===
+
+  https://n-factorial.vercel.app/en          → 200 (Next.js)
+  https://n-factorial.vercel.app/api/health  → 200 (proxy to Render)
+
+Render API must be running with OPENAI_API_KEY set.
