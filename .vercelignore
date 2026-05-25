@@ -1,20 +1,24 @@
-# Vercel hosts Next.js UI only (frontend/). API runs on Render.
-app/
-pyproject.toml
-requirements.txt
-requirements-dev.txt
-render.yaml
-Dockerfile
-.dockerignore
-Procfile
-runtime.txt
-tests/
+# Vercel: deploy Next.js from frontend/ only. Python API stays on Render.
+#
+# IMPORTANT: use /app/ (leading slash) — NOT "app/"
+# "app/" would ignore frontend/src/app/ and the build would only produce /404.
+
+/app/
+/pyproject.toml
+/requirements.txt
+/requirements-dev.txt
+/render.yaml
+/Dockerfile
+/.dockerignore
+/Procfile
+/runtime.txt
+/tests/
 /scripts/
-run_pipeline.py
-.venv
-venv
+/run_pipeline.py
+/.venv
+/venv
 __pycache__
 .pytest_cache
-data/
+/data/
 *.pyc
 .env

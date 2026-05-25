@@ -1,24 +1,20 @@
-VERCEL = Next.js UI ONLY. Python API = Render.
+ROOT CAUSE (fixed): .vercelignore had "app/" which excluded frontend/src/app/
+→ build showed only Route /404 and .next errors.
 
-=== OPTION A (BEST) ===
+=== REQUIRED in Vercel Dashboard ===
 
-Settings → General → Root Directory: frontend
-Framework Preset: Next.js
-Environment → API_URL = https://editorial-engine-api.onrender.com
+1. Framework Preset: Next.js (NOT Python)
+2. Root Directory: frontend  ← strongly recommended
+3. Environment: API_URL = https://editorial-engine-api.onrender.com
+4. Deploy latest main (NOT old commits). Redeploy + Clear build cache.
 
-Uses frontend/vercel.json. Do NOT copy .next to repo root.
+=== Success log should show ===
 
-=== OPTION B (Root Directory empty) ===
-
-Uses root vercel.json with outputDirectory: "frontend"
-(build stays in frontend/, Vercel packages frontend/ as the app)
-
-=== NEVER ===
-
-- Framework Preset: Python
-- Symlink/copy only .next to repo root (breaks routes → 404 only)
+  Generating static pages (24/24) or similar — NOT (1/1)
+  Routes: /en, /ru, /discover, /voice, ...
+  NOT only: Route (pages) ─ ○ /404
 
 === Test ===
 
-  https://n-factorial.vercel.app/en          → 200
-  https://n-factorial.vercel.app/api/health  → 200 (proxy to Render)
+  https://n-factorial.vercel.app/en
+  https://n-factorial.vercel.app/api/health
