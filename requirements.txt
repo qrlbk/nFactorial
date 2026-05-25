@@ -1,5 +1,4 @@
-# Editable Git install with no remote (adversarial-editorial-engine==0.1.0)
--e /Users/kuralbekadilet475/nFactorial
+# Production deps for Render (regenerate: pip freeze | grep -v '^-e')
 aiosqlite==0.22.1
 annotated-doc==0.0.4
 annotated-types==0.7.0
@@ -49,8 +48,6 @@ pydantic-settings==2.14.1
 pydantic_core==2.46.4
 Pygments==2.20.0
 pypdf==6.12.1
-pytest==9.0.3
-pytest-asyncio==1.3.0
 python-dotenv==1.2.2
 python-multipart==0.0.29
 PyYAML==6.0.3

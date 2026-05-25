@@ -53,7 +53,8 @@ git push -u origin main
 | `LANGFUSE_PUBLIC_KEY` | Нет | для трейсинга |
 | `LANGFUSE_SECRET_KEY` | Нет | |
 
-5. Дождитесь деплоя. Скопируйте URL, например:  
+5. **Manual Deploy → Deploy latest commit** (не старый `56fb746`). Дождитесь зелёной сборки.
+6. Скопируйте URL, например:  
    `https://editorial-engine-api.onrender.com`
 
 6. Проверка:
