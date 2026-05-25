@@ -1,0 +1,13 @@
+{
+  "name": "n-factorial",
+  "private": true,
+  "description": "Vercel deploy root — Next.js app lives in frontend/",
+  "workspaces": ["frontend"],
+  "scripts": {
+    "build": "npm run build --workspace=frontend",
+    "dev": "npm run dev --workspace=frontend"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

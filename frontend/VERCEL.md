@@ -19,7 +19,7 @@ Correct log should mention `npm run build` and Next.js, not Python.
 
 ## Checklist
 
-1. **Root Directory:** `frontend` (best) or repo root + root `vercel.json`
+1. **Root Directory:** leave **empty** (repo root uses `package.json` workspaces) **or** set `frontend` and remove root `vercel.json` overrides
 2. **Environment → Production:** `API_URL` = Render API URL (no trailing slash)
 3. **Redeploy** with clear cache
 4. Test: `https://YOUR_APP.vercel.app/en`
