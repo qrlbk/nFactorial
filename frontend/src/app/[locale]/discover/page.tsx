@@ -30,7 +30,7 @@ export default function DiscoverPage() {
     }
   }
 
-  function useAsContext(item: DiscoveryItem) {
+  function openWithContext(item: DiscoveryItem) {
     const ctx = `${item.title}\n\n${item.excerpt}\n\nSource: ${item.url}`;
     router.push(`/?context=${encodeURIComponent(ctx)}`);
   }
@@ -78,7 +78,7 @@ export default function DiscoverPage() {
               <p className="mb-3 line-clamp-3 text-sm text-[var(--text-secondary)]">{item.excerpt}</p>
               <button
                 type="button"
-                onClick={() => useAsContext(item)}
+                onClick={() => openWithContext(item)}
                 className="text-sm text-[var(--primary)] hover:underline"
               >
                 {t("useAsContext")}
