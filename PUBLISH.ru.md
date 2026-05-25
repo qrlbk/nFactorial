@@ -76,9 +76,12 @@ docker run -p 8000:8000 -e OPENAI_API_KEY=... -e LLM_PROVIDER=openai editorial-a
 
 ## Шаг 2. Frontend на Vercel
 
+**Важно:** если в логе сборки видите `Using Python 3.12 from pyproject.toml` — Vercel деплоит **не** Next.js, а Python API. Это даёт `FUNCTION_INVOCATION_FAILED`. Нужен **Next.js** (см. ниже).
+
 1. [vercel.com/new](https://vercel.com/new) → Import репозитория.
-2. **Root Directory:** `frontend` (обязательно).
-3. Framework: **Next.js** (авто).
+2. **Settings → General → Root Directory:** `frontend` (обязательно).  
+   Либо оставьте корень репо — сработает корневой `vercel.json` (сборка `cd frontend && npm run build`).
+3. **Settings → General → Framework Preset:** **Next.js** (не Python).
 4. **Environment Variables:**
 
 | Имя | Значение | Среды |

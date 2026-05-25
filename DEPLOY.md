@@ -102,7 +102,10 @@ cd frontend && npm run dev
 
 ### `FUNCTION_INVOCATION_FAILED` (500 on Vercel)
 
-1. **Project Settings → General → Root Directory:** must be `frontend` (not repo root).
+**Build log shows `Using Python 3.12 from pyproject.toml`?**  
+Vercel deployed Python (FastAPI), not Next.js. Set **Framework Preset → Next.js** and **Root Directory → `frontend`**, or use root `vercel.json` in the repo. Redeploy with cache cleared.
+
+1. **Project Settings → General → Root Directory:** must be `frontend` (not repo root), unless root `vercel.json` is used.
 2. Pull latest `main` (includes fix removing `outputFileTracingRoot` from `next.config.ts`).
 3. **Deployments → Redeploy** (clear build cache if needed).
 4. Open `https://your-app.vercel.app/en` — root `/` redirects via middleware.

@@ -1,8 +1,25 @@
 # Vercel setup (required)
 
-1. **Project → Settings → General → Root Directory:** `frontend`
-2. **Environment → Production:** `API_URL` = your Render API URL (no trailing slash)
-3. After git push: **Deployments → Redeploy** → enable **Clear build cache**
-4. Test: `https://YOUR_APP.vercel.app/en` (not only `/`)
+## Wrong build (Python instead of Next.js)
 
-If Root Directory is empty, the deploy will crash with `FUNCTION_INVOCATION_FAILED`.
+If deploy logs show:
+
+```
+Using Python 3.12 from pyproject.toml
+runtime: python3.12  path: /
+```
+
+Vercel is deploying the **FastAPI backend**, not the UI. Fix:
+
+1. **Settings → General → Framework Preset:** **Next.js**
+2. **Root Directory:** `frontend` (recommended), **or** use repo-root `vercel.json` (already in repo)
+3. **Redeploy** with **Clear build cache**
+
+Correct log should mention `npm run build` and Next.js, not Python.
+
+## Checklist
+
+1. **Root Directory:** `frontend` (best) or repo root + root `vercel.json`
+2. **Environment → Production:** `API_URL` = Render API URL (no trailing slash)
+3. **Redeploy** with clear cache
+4. Test: `https://YOUR_APP.vercel.app/en`
