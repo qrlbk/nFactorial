@@ -17,6 +17,8 @@ Vercel is deploying the **FastAPI backend**, not the UI. Fix:
 
 Correct log should mention `npm run build` and Next.js, not Python.
 
+If you see `No Next.js version detected`: root `package.json` must list `next` in `dependencies` (already in repo), or set **Root Directory** to `frontend` only.
+
 ## Checklist
 
 1. **Root Directory:** leave **empty** (repo root uses `package.json` workspaces) **or** set `frontend` and remove root `vercel.json` overrides
