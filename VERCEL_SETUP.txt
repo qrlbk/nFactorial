@@ -1,0 +1,10 @@
+REQUIRED in Vercel Dashboard (one-time):
+
+  Project → Settings → General → Root Directory: frontend
+
+Without this, install may succeed but deploy/runtime returns 500.
+
+Then: Deployments → Redeploy → Clear build cache
+Environment: API_URL = https://YOUR-RENDER-API.onrender.com
+
+Test: https://n-factorial.vercel.app/en  (must return 200)

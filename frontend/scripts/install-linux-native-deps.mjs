@@ -1,43 +1,41 @@
 /**
  * Vercel/Linux CI: npm often skips optional platform packages (npm/cli#4828).
- * Install Tailwind Oxide + Lightning CSS GNU binaries when missing.
+ * @see https://github.com/tailwindlabs/tailwindcss/issues/15806
  */
 import { execSync } from "node:child_process";
-import { existsSync } from "node:fs";
-import { join } from "node:path";
+import { createRequire } from "node:module";
 
-const isLinux = process.platform === "linux";
-if (!isLinux) {
+if (process.platform !== "linux") {
   process.exit(0);
 }
 
 const arch = process.arch === "arm64" ? "arm64" : "x64";
-const libc = "gnu";
+const require = createRequire(import.meta.url);
 
-const packages = [
-  `@tailwindcss/oxide-linux-${arch}-${libc}@4.3.0`,
-  `lightningcss-linux-${arch}-${libc}@1.32.0`,
-];
-
-const oxideDir = join(
-  process.cwd(),
-  "node_modules",
-  "@tailwindcss",
-  "oxide",
-);
-
-for (const pkg of packages) {
+function hasBinding() {
   try {
-    execSync(`npm install --no-save --no-package-lock ${pkg}`, {
-      stdio: "inherit",
-    });
-  } catch (error) {
-    console.warn(`[postinstall] optional install failed for ${pkg}:`, error);
+    require("@tailwindcss/oxide");
+    return true;
+  } catch {
+    return false;
   }
 }
 
-if (!existsSync(join(oxideDir, "node_modules"))) {
-  console.warn(
-    "[postinstall] @tailwindcss/oxide native binding may still be missing",
-  );
+if (hasBinding()) {
+  process.exit(0);
+}
+
+const packages = [
+  `@tailwindcss/oxide-linux-${arch}-gnu@4.3.0`,
+  `lightningcss-linux-${arch}-gnu@1.32.0`,
+].join(" ");
+
+console.log("[postinstall] Installing Linux native bindings:", packages);
+execSync(`npm install --no-save --no-package-lock ${packages}`, {
+  stdio: "inherit",
+});
+
+if (!hasBinding()) {
+  console.warn("[postinstall] @tailwindcss/oxide still not loadable after install");
+  process.exit(0);
 }

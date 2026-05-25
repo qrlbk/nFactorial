@@ -1,8 +1,0 @@
-{
-  "name": "n-factorial",
-  "private": true,
-  "description": "Repo root — deploy UI from frontend/ only (see vercel.json).",
-  "dependencies": {
-    "next": "16.2.6"
-  }
-}
