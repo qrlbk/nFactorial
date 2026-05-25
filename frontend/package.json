@@ -7,8 +7,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "check:i18n": "node scripts/check-i18n-parity.mjs",
-    "postinstall": "node scripts/install-linux-native-deps.mjs"
+    "check:i18n": "node scripts/check-i18n-parity.mjs"
   },
   "optionalDependencies": {
     "@tailwindcss/oxide-linux-x64-gnu": "4.3.0",

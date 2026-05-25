@@ -9,7 +9,7 @@ Dockerfile
 Procfile
 runtime.txt
 tests/
-scripts/
+/scripts/
 run_pipeline.py
 .venv
 venv
