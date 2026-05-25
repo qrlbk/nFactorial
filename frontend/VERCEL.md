@@ -30,7 +30,7 @@
 
 ## 5. Проверка лога
 
-✅ `Detected Next.js version: 16.2.6`  
-✅ `next build --webpack`  
+✅ `Detected Next.js version: 15.5.x`  
+✅ `next build` (без `--webpack`)  
 ❌ `Using Python 3.12 from pyproject.toml`  
 ❌ `Cannot find native binding` / `oxide-linux`

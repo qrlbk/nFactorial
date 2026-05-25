@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack && node scripts/vercel-postbuild.mjs",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "check:i18n": "node scripts/check-i18n-parity.mjs"
@@ -17,10 +17,10 @@
   },
   "dependencies": {
     "lucide-react": "^1.16.0",
-    "next": "16.2.6",
+    "next": "15.5.18",
     "next-intl": "^4.12.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "recharts": "^3.8.1"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.6",
+    "eslint-config-next": "15.5.18",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
