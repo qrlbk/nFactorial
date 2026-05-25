@@ -1,9 +1,12 @@
-RECOMMENDED in Vercel Dashboard (one-time):
+BEST (pick one):
 
-  Project → Settings → General → Root Directory: frontend
+  A) Settings → General → Root Directory: frontend
+     (then use frontend/vercel.json only; remove custom root build hacks)
 
-If Root Directory is empty, root package.json lists "next" for detection;
-install/build still run in frontend/ via vercel.json.
+  B) Root Directory empty — vercel.json builds in frontend/ and symlinks
+     .next to repo root so Vercel finds /vercel/path0/.next
+
+Root package.json lists "next" for framework detection only.
 
 Then: Deployments → Redeploy → Clear build cache
 Environment: API_URL = https://YOUR-RENDER-API.onrender.com
