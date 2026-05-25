@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "check:i18n": "node scripts/check-i18n-parity.mjs"
@@ -18,7 +18,8 @@
     "recharts": "^3.8.1"
   },
   "optionalDependencies": {
-    "@parcel/watcher-linux-x64-glibc": "^2.5.1"
+    "@parcel/watcher-linux-x64-glibc": "^2.5.1",
+    "lightningcss-linux-x64-gnu": "^1.29.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

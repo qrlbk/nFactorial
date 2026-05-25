@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { existsSync } from "fs";
 import path from "path";
 import createNextIntlPlugin from "next-intl/plugin";
 
@@ -7,11 +8,16 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 /** Backend origin for /api rewrites — set API_URL on Vercel (e.g. https://your-api.onrender.com). */
 const apiOrigin = (process.env.API_URL ?? "http://127.0.0.1:8000").replace(/\/$/, "");
 
-// Monorepo: `npm run build --workspace=frontend` runs with cwd=frontend/, next hoisted to repo root.
-const nextRoot =
-  process.env.VERCEL === "1" || process.env.npm_lifecycle_event === "build"
-    ? path.resolve(process.cwd(), "..")
-    : process.cwd();
+function resolveNextRoot(): string {
+  const appDir = process.cwd();
+  const parent = path.resolve(appDir, "..");
+  if (existsSync(path.join(parent, "node_modules", "next"))) {
+    return parent;
+  }
+  return appDir;
+}
+
+const nextRoot = resolveNextRoot();
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: nextRoot,
