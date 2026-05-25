@@ -3,9 +3,13 @@ VERCEL = Next.js UI ONLY. Python API = Render (editorial-engine-api.onrender.com
 === REQUIRED (Dashboard) ===
 
 1. Settings → General → Framework Preset: Next.js  (NOT Python)
-2. Settings → General → Root Directory: frontend   (strongly recommended)
+2. Settings → General → Root Directory: frontend   (BEST — uses frontend/vercel.json)
+   OR leave empty (uses root vercel.json + next stub install)
 3. Settings → Environment → API_URL = https://editorial-engine-api.onrender.com
 4. Deployments → Redeploy → Clear build cache
+
+If build says "No Next.js version detected" with Root Directory empty,
+latest root vercel.json runs: npm install next@16.2.6 (detector) then frontend npm ci.
 
 === If you see "could not import app/main.py" ===
 
