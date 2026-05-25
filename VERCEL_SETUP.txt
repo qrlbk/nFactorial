@@ -1,8 +1,9 @@
-REQUIRED in Vercel Dashboard (one-time):
+RECOMMENDED in Vercel Dashboard (one-time):
 
   Project → Settings → General → Root Directory: frontend
 
-Without this, install may succeed but deploy/runtime returns 500.
+If Root Directory is empty, root package.json lists "next" for detection;
+install/build still run in frontend/ via vercel.json.
 
 Then: Deployments → Redeploy → Clear build cache
 Environment: API_URL = https://YOUR-RENDER-API.onrender.com

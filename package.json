@@ -1,0 +1,8 @@
+{
+  "name": "n-factorial",
+  "private": true,
+  "description": "Meta package for Vercel Next.js detection only. App builds from frontend/.",
+  "dependencies": {
+    "next": "16.2.6"
+  }
+}
