@@ -1,20 +1,29 @@
-ROOT CAUSE (fixed): .vercelignore had "app/" which excluded frontend/src/app/
-→ build showed only Route /404 and .next errors.
+VERCEL DEPLOY — follow exactly or build fails.
 
-=== REQUIRED in Vercel Dashboard ===
+=== MANDATORY (Dashboard → Settings → General) ===
 
-1. Framework Preset: Next.js (NOT Python)
-2. Root Directory: frontend  ← strongly recommended
-3. Environment: API_URL = https://editorial-engine-api.onrender.com
-4. Deploy latest main (NOT old commits). Redeploy + Clear build cache.
+  Root Directory:  frontend
+  Framework Preset: Next.js
+  Node.js Version:   20.x (optional, default OK)
 
-=== Success log should show ===
+Do NOT leave Root Directory empty. There is no root vercel.json anymore.
 
-  Generating static pages (24/24) or similar — NOT (1/1)
-  Routes: /en, /ru, /discover, /voice, ...
-  NOT only: Route (pages) ─ ○ /404
+=== Environment ===
 
-=== Test ===
+  API_URL = https://editorial-engine-api.onrender.com
 
-  https://n-factorial.vercel.app/en
-  https://n-factorial.vercel.app/api/health
+=== Deploy ===
+
+  Git branch: main
+  Latest fix: .vercelignore uses /app/ not app/ (so src/app is uploaded)
+  Redeploy → Clear build cache
+
+=== Success build log ===
+
+  Detected Next.js version: 16.2.6
+  Generating static pages (20+)  — NOT (1/1)
+  Routes: /en, /ru, /discover …  — NOT only /404
+
+=== API ===
+
+  Python FastAPI runs on Render only, not Vercel.
